@@ -9,7 +9,7 @@ import CertificateTemplate from '@/components/CertificateTemplate';
 import { generatePDF } from '@/lib/pdf';
 
 export default function WarrantiesPage() {
-  const { currentUser, warranties, customers } = useStore();
+  const { currentUser, warranties, customers, dealers } = useStore();
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [downloadingId, setDownloadingId] = useState<string | null>(null);
@@ -163,7 +163,7 @@ export default function WarrantiesPage() {
             key={`cert-${warranty.id}`} 
             warranty={warranty} 
             customer={customer} 
-            dealer={currentUser} 
+            dealer={dealers.find(d => d.id === currentUser.dealerId)!} 
           />
         );
       })}

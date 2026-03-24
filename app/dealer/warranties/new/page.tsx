@@ -407,7 +407,7 @@ export default function NewWarrantyPage() {
         <CertificateTemplate 
           warranty={warranties.find(w => w.id === createdWarrantyId)!}
           customer={customers.find(c => c.id === createdCustomerId)!}
-          dealer={currentUser}
+          dealer={dealers.find(d => d.id === currentUser.dealerId)!}
         />
       )}
     </div>

@@ -32,8 +32,8 @@ export default function CustomerClaimDetailsPage({ params }: { params: Promise<{
 
     addClaimMessage(claim.id, {
       senderId: currentUser.id,
-      senderName: currentUser.name,
-      text: newMessage.trim()
+      senderRole: currentUser.role,
+      content: newMessage.trim()
     });
     setNewMessage('');
   };
@@ -117,10 +117,10 @@ export default function CustomerClaimDetailsPage({ params }: { params: Promise<{
                       <div className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                         isCustomer ? 'bg-sky-600 text-white' : 'bg-slate-800 text-slate-200'
                       }`}>
-                        <p className="text-sm">{msg.text}</p>
+                        <p className="text-sm">{msg.content}</p>
                       </div>
                       <span className="text-xs text-slate-500 mt-1">
-                        {isCustomer ? 'You' : msg.senderName} • {format(new Date(msg.createdAt), 'HH:mm')}
+                        {isCustomer ? 'You' : msg.senderRole === 'dealer' ? dealer?.name || 'Dealer' : 'Admin'} • {format(new Date(msg.createdAt), 'HH:mm')}
                       </span>
                     </div>
                   );
@@ -187,8 +187,8 @@ export default function CustomerClaimDetailsPage({ params }: { params: Promise<{
                   <p className="font-medium">{dealer.name}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500">Contact</p>
-                  <p className="font-medium">{dealer.email}</p>
+                  <p className="text-sm text-slate-500">FCA Number</p>
+                  <p className="font-medium">{dealer.fcaNumber}</p>
                 </div>
               </div>
             </div>

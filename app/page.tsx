@@ -100,45 +100,11 @@ export default function LandingPage() {
           >
             <div className="rounded-2xl border border-slate-800/50 bg-slate-900/50 p-2 backdrop-blur-md shadow-2xl shadow-sky-900/20 transform rotate-x-2 hover:rotate-x-0 transition-transform duration-500">
               <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[16/9] relative flex items-stretch">
-                {/* Abstract representation of dashboard */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
-                
-                {/* Sidebar */}
-                <div className="w-64 border-r border-slate-800/50 bg-slate-900/30 p-6 hidden md:flex flex-col gap-6 relative z-10">
-                  <div className="h-8 w-32 bg-slate-800/80 rounded-md"></div>
-                  <div className="space-y-3">
-                    {[1,2,3,4,5].map(i => <div key={i} className={`h-8 w-full rounded-md ${i === 1 ? 'bg-sky-500/20 border border-sky-500/30' : 'bg-slate-800/50'}`}></div>)}
-                  </div>
-                </div>
-                
-                {/* Main Content */}
-                <div className="flex-1 p-8 relative z-10 flex flex-col gap-6">
-                  <div className="flex justify-between items-center">
-                    <div className="h-8 w-48 bg-slate-800/80 rounded-md"></div>
-                    <div className="h-10 w-32 bg-sky-500/20 border border-sky-500/30 rounded-full"></div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-6">
-                    {[1,2,3].map(i => (
-                      <div key={i} className="h-32 bg-slate-800/40 rounded-xl border border-slate-700/50 p-5 flex flex-col justify-between">
-                        <div className="h-4 w-24 bg-slate-700/50 rounded"></div>
-                        <div className="h-8 w-32 bg-slate-600/50 rounded"></div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex-1 bg-slate-800/30 rounded-xl border border-slate-700/50 p-6">
-                    <div className="h-6 w-48 bg-slate-700/50 rounded mb-6"></div>
-                    <div className="space-y-4">
-                      {[1,2,3,4].map(i => <div key={i} className="h-12 w-full bg-slate-800/40 rounded-lg"></div>)}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/60 backdrop-blur-[2px] z-20">
-                  <span className="text-sky-400 font-medium tracking-widest uppercase text-sm border border-sky-500/30 px-6 py-3 rounded-full bg-sky-500/10 shadow-[0_0_30px_-5px_rgba(14,165,233,0.3)]">
-                    Interactive Dashboard Preview
-                  </span>
-                </div>
+                <img 
+                  src="https://i.postimg.cc/tCZsGCTV/wvdash.png" 
+                  alt="WarrantyVault Dashboard Preview" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </motion.div>

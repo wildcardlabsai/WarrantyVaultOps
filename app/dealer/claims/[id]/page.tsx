@@ -47,8 +47,8 @@ export default function ClaimDetailsPage({ params }: { params: Promise<{ id: str
 
     addClaimMessage(claim.id, {
       senderId: currentUser.id,
-      senderName: currentUser.name,
-      text: newMessage.trim()
+      senderRole: currentUser.role,
+      content: newMessage.trim()
     });
     setNewMessage('');
   };
@@ -175,10 +175,10 @@ export default function ClaimDetailsPage({ params }: { params: Promise<{ id: str
                       <div className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                         isDealer ? 'bg-sky-600 text-white' : 'bg-slate-800 text-slate-200'
                       }`}>
-                        <p className="text-sm">{msg.text}</p>
+                        <p className="text-sm">{msg.content}</p>
                       </div>
                       <span className="text-xs text-slate-500 mt-1">
-                        {isDealer ? 'You' : msg.senderName} • {format(new Date(msg.createdAt), 'HH:mm')}
+                        {isDealer ? 'You' : msg.senderRole === 'customer' ? customer?.name || 'Customer' : 'Admin'} • {format(new Date(msg.createdAt), 'HH:mm')}
                       </span>
                     </div>
                   );
