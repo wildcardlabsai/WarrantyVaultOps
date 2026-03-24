@@ -266,7 +266,7 @@ export default function LandingPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Why switch to self-funded warranties?</h2>
-              <p className="text-lg text-slate-400 mb-8">Traditional warranty companies take the lion's share of your premium. With WarrantyVault, you keep the profit and control the customer experience.</p>
+              <p className="text-lg text-slate-400 mb-8">Traditional warranty companies take the lion&apos;s share of your premium. With WarrantyVault, you keep the profit and control the customer experience.</p>
               
               <div className="space-y-6">
                 {[
@@ -385,7 +385,7 @@ export default function LandingPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl relative"
               >
-                <div className="text-4xl text-sky-500/20 absolute top-6 left-6 font-serif">"</div>
+                <div className="text-4xl text-sky-500/20 absolute top-6 left-6 font-serif">&quot;</div>
                 <p className="text-slate-300 relative z-10 mb-8 leading-relaxed pt-4">{testimonial.quote}</p>
                 <div className="flex items-center gap-4">
                   <img src={testimonial.image} alt={testimonial.author} className="w-12 h-12 rounded-full border border-slate-700" />
